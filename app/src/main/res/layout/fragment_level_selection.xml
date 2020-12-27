@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LevelSelectionFragment"
-    android:background="@color/teal_700">
+    android:background="@color/teal_700"
+    tools:context=".LevelSelectionFragment">
 
     <TextView
         android:id="@+id/textView_select_level"
@@ -31,39 +31,41 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:id="@+id/button_easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:layout_marginLeft="35dp"
+            android:backgroundTint="@color/black"
+            android:elevation="4dp"
             android:text="@string/easy"
-            android:textSize="40sp"
             android:textColor="@color/white"
-            android:backgroundTint="@color/black"
-            tools:targetApi="lollipop"
-            android:elevation="4dp"/>
+            android:textSize="40sp"
+            tools:targetApi="lollipop" />
 
         <Button
+            android:id="@+id/button_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/medium"
-            android:textSize="40sp"
-            android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            tools:targetApi="lollipop"
-            android:elevation="4dp"/>
+            android:elevation="4dp"
+            android:text="@string/medium"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:targetApi="lollipop" />
 
         <Button
+            android:id="@+id/button_hard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:layout_marginLeft="35dp"
-            android:text="@string/hard"
-            android:textSize="40sp"
-            android:textColor="@color/white"
             android:backgroundTint="@color/black"
-            tools:targetApi="lollipop"
-            android:elevation="4dp"/>
-
+            android:elevation="4dp"
+            android:text="@string/hard"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:targetApi="lollipop" />
 
     </LinearLayout>
 
