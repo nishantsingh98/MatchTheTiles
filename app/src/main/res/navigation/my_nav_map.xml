@@ -11,19 +11,20 @@
         android:label="fragment_level_selection"
         tools:layout="@layout/fragment_level_selection">
         <action
-            android:id="@+id/action_levelSelectionFragment_to_gameFragment"
-            app:destination="@id/easyGameFragment" />
-        <action
-            android:id="@+id/action_levelSelectionFragment_to_gameFragment2"
+            android:id="@+id/action_levelSelectionFragment_to_easy_gameFragment"
             app:destination="@id/easyGameFragment"
             app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit" />
+            app:exitAnim="@anim/fragment_fade_exit"/>
         <action
-            android:id="@+id/action_levelSelectionFragment_to_mediumGameFragment"
-            app:destination="@id/mediumGameFragment" />
+            android:id="@+id/action_levelSelectionFragment_to_medium_gameFragment"
+            app:destination="@id/mediumGameFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
         <action
-            android:id="@+id/action_levelSelectionFragment_to_hardGameFragment"
-            app:destination="@id/hardGameFragment" />
+            android:id="@+id/action_levelSelectionFragment_to_hard_GameFragment"
+            app:destination="@id/hardGameFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
     </fragment>
 
     <fragment
