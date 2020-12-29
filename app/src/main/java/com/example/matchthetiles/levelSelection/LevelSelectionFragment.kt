@@ -1,4 +1,4 @@
-package com.example.matchthetiles
+package com.example.matchthetiles.levelSelection
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.matchthetiles.R
 
 class LevelSelectionFragment : Fragment(), View.OnClickListener {
     private lateinit var navController: NavController
@@ -29,9 +30,9 @@ class LevelSelectionFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.button_easy-> navController.navigate(R.id.action_levelSelectionFragment_to_easy_gameFragment)
-            R.id.button_medium-> navController.navigate(R.id.action_levelSelectionFragment_to_medium_gameFragment)
-            R.id.button_hard-> navController.navigate(R.id.action_levelSelectionFragment_to_hard_GameFragment)
+            R.id.button_easy -> navController.navigate(R.id.action_levelSelectionFragment_to_easy_gameFragment)
+            R.id.button_medium -> navController.navigate(R.id.action_levelSelectionFragment_to_medium_gameFragment)
+            R.id.button_hard -> navController.navigate(R.id.action_levelSelectionFragment_to_hard_GameFragment)
         }
     }
 }

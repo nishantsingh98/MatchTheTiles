@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/levelSelectionFragment"
-        android:name="com.example.matchthetiles.LevelSelectionFragment"
+        android:name="com.example.matchthetiles.levelSelection.LevelSelectionFragment"
         android:label="fragment_level_selection"
         tools:layout="@layout/fragment_level_selection">
         <action
