@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/easyGameFragment"
-        android:name="com.example.matchthetiles.GameFragment"
+        android:name="com.example.matchthetiles.gameLevels.EasyGameFragment"
         android:label="fragment_game"
         tools:layout="@layout/easy_fragment_game">
         <action
@@ -41,7 +41,7 @@
 
     <fragment
         android:id="@+id/mediumGameFragment"
-        android:name="com.example.matchthetiles.mediumGameFragment"
+        android:name="com.example.matchthetiles.gameLevels.MediumGameFragment"
         android:label="fragment_medium_game"
         tools:layout="@layout/fragment_medium_game">
         <action
@@ -53,7 +53,7 @@
 
     <fragment
         android:id="@+id/hardGameFragment"
-        android:name="com.example.matchthetiles.hardGameFragment"
+        android:name="com.example.matchthetiles.gameLevels.HardGameFragment"
         android:label="fragment_hard_game"
         tools:layout="@layout/fragment_hard_game">
         <action
@@ -65,7 +65,7 @@
 
     <fragment
         android:id="@+id/scoreFragment"
-        android:name="com.example.matchthetiles.ScoreFragment"
+        android:name="com.example.matchthetiles.scoring.ScoreFragment"
         android:label="fragment_score"
         tools:layout="@layout/fragment_score">
         <action
