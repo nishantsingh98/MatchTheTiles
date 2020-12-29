@@ -10,7 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
 class LevelSelectionFragment : Fragment(), View.OnClickListener {
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
      override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
