@@ -5,36 +5,63 @@
     android:id="@+id/my_nav_map"
     app:startDestination="@id/levelSelectionFragment">
 
-
     <fragment
         android:id="@+id/levelSelectionFragment"
         android:name="com.example.matchthetiles.LevelSelectionFragment"
         android:label="fragment_level_selection"
-        tools:layout="@layout/fragment_level_selection" >
+        tools:layout="@layout/fragment_level_selection">
         <action
             android:id="@+id/action_levelSelectionFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/easyGameFragment" />
         <action
             android:id="@+id/action_levelSelectionFragment_to_gameFragment2"
-            app:destination="@id/gameFragment"
+            app:destination="@id/easyGameFragment"
             app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"  />
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_levelSelectionFragment_to_mediumGameFragment"
+            app:destination="@id/mediumGameFragment" />
+        <action
+            android:id="@+id/action_levelSelectionFragment_to_hardGameFragment"
+            app:destination="@id/hardGameFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/gameFragment"
+        android:id="@+id/easyGameFragment"
         android:name="com.example.matchthetiles.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game">
+        tools:layout="@layout/easy_fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+            app:destination="@id/scoreFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mediumGameFragment"
+        android:name="com.example.matchthetiles.mediumGameFragment"
+        android:label="fragment_medium_game"
+        tools:layout="@layout/fragment_medium_game">
         <action
-            android:id="@+id/action_gameFragment_to_scoreFragment2"
+            android:id="@+id/action_mediumGameFragment_to_scoreFragment"
             app:destination="@id/scoreFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit" />
     </fragment>
+
+    <fragment
+        android:id="@+id/hardGameFragment"
+        android:name="com.example.matchthetiles.hardGameFragment"
+        android:label="fragment_hard_game"
+        tools:layout="@layout/fragment_hard_game">
+        <action
+            android:id="@+id/action_hardGameFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+
     <fragment
         android:id="@+id/scoreFragment"
         android:name="com.example.matchthetiles.ScoreFragment"
@@ -43,6 +70,7 @@
         <action
             android:id="@+id/action_gameFragment_to_scoreFragment2"
             app:enterAnim="@anim/fragment_fade_enter" />
+
     </fragment>
 
 </navigation>
