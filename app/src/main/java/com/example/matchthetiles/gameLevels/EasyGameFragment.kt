@@ -15,8 +15,8 @@ import com.example.matchthetiles.R
 class EasyGameFragment : Fragment(), View.OnClickListener {
     private lateinit var navController: NavController
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.easy_fragment_game, container, false)
@@ -29,6 +29,13 @@ class EasyGameFragment : Fragment(), View.OnClickListener {
         val easy3 = view.findViewById<Button>(R.id.easy_3)
         val easy4 = view.findViewById<Button>(R.id.easy_4)
 
+        val numberText = arrayListOf(1, 2, 1, 2)
+        numberText.shuffle()
+        easy1.text=numberText[0].toString()
+        easy2.text=numberText[1].toString()
+        easy3.text=numberText[2].toString()
+        easy4.text=numberText[3].toString()
+
         easy1.setOnClickListener(this)
         easy2.setOnClickListener(this)
         easy3.setOnClickListener(this)
@@ -38,13 +45,13 @@ class EasyGameFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.easy_1 -> Toast.makeText(context, "button ${R.id.easy_1}", Toast.LENGTH_SHORT)
-                .show()
+                    .show()
             R.id.easy_2 -> Toast.makeText(context, "button ${R.id.easy_2}", Toast.LENGTH_SHORT)
-                .show()
+                    .show()
             R.id.easy_3 -> Toast.makeText(context, "button ${R.id.easy_3}", Toast.LENGTH_SHORT)
-                .show()
+                    .show()
             R.id.easy_4 -> Toast.makeText(context, "button ${R.id.easy_4}", Toast.LENGTH_SHORT)
-                .show()
+                    .show()
         }
     }
 }
