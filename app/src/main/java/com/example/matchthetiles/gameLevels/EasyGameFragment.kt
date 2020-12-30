@@ -24,34 +24,11 @@ class EasyGameFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         navController = Navigation.findNavController(view)
-        val easy1 = view.findViewById<Button>(R.id.easy_1)
-        val easy2 = view.findViewById<Button>(R.id.easy_2)
-        val easy3 = view.findViewById<Button>(R.id.easy_3)
-        val easy4 = view.findViewById<Button>(R.id.easy_4)
-
-        val numberText = arrayListOf(1, 2, 1, 2)
-        numberText.shuffle()
-        easy1.text=numberText[0].toString()
-        easy2.text=numberText[1].toString()
-        easy3.text=numberText[2].toString()
-        easy4.text=numberText[3].toString()
-
-        easy1.setOnClickListener(this)
-        easy2.setOnClickListener(this)
-        easy3.setOnClickListener(this)
-        easy4.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.easy_1 -> Toast.makeText(context, "button ${R.id.easy_1}", Toast.LENGTH_SHORT)
-                    .show()
-            R.id.easy_2 -> Toast.makeText(context, "button ${R.id.easy_2}", Toast.LENGTH_SHORT)
-                    .show()
-            R.id.easy_3 -> Toast.makeText(context, "button ${R.id.easy_3}", Toast.LENGTH_SHORT)
-                    .show()
-            R.id.easy_4 -> Toast.makeText(context, "button ${R.id.easy_4}", Toast.LENGTH_SHORT)
-                    .show()
+
         }
     }
 }
