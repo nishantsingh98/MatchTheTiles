@@ -1,35 +1,19 @@
 package com.example.matchthetiles.gameLevels
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.matchthetiles.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [EasyGameFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class EasyGameFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+class EasyGameFragment : Fragment(), View.OnClickListener {
+    private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,23 +22,43 @@ class EasyGameFragment : Fragment() {
         return inflater.inflate(R.layout.easy_fragment_game, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment GameFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            EasyGameFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        navController = Navigation.findNavController(view)
+        val easy1 = view.findViewById<Button>(R.id.easy_1)
+        val easy2 = view.findViewById<Button>(R.id.easy_2)
+        val easy3 = view.findViewById<Button>(R.id.easy_3)
+        val easy4 = view.findViewById<Button>(R.id.easy_4)
+
+        //assign text first
+        val map = HashMap<Int,Int>()
+        for (i in 0..1) map[i] = 2
+
+        for (i in 1..4){
+            when(i){
+                1->easy1.text = map[i%2].toString()
+                2->easy2.text = map[i%2].toString()
+                3->easy3.text = map[i%2].toString()
+                4->easy4.text = map[i%2].toString()
             }
+            map[i%2]= map[i%2]!!-1
+        }
+
+        easy1.setOnClickListener(this)
+        easy2.setOnClickListener(this)
+        easy3.setOnClickListener(this)
+        easy4.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.easy_1 -> Toast.makeText(context, "button ${R.id.easy_1}", Toast.LENGTH_SHORT)
+                .show()
+            R.id.easy_2 -> Toast.makeText(context, "button ${R.id.easy_2}", Toast.LENGTH_SHORT)
+                .show()
+            R.id.easy_3 -> Toast.makeText(context, "button ${R.id.easy_3}", Toast.LENGTH_SHORT)
+                .show()
+            R.id.easy_4 -> Toast.makeText(context, "button ${R.id.easy_4}", Toast.LENGTH_SHORT)
+                .show()
+        }
     }
 }
