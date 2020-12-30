@@ -29,20 +29,6 @@ class EasyGameFragment : Fragment(), View.OnClickListener {
         val easy3 = view.findViewById<Button>(R.id.easy_3)
         val easy4 = view.findViewById<Button>(R.id.easy_4)
 
-        //assign text first
-        val map = HashMap<Int,Int>()
-        for (i in 0..1) map[i] = 2
-
-        for (i in 1..4){
-            when(i){
-                1->easy1.text = map[i%2].toString()
-                2->easy2.text = map[i%2].toString()
-                3->easy3.text = map[i%2].toString()
-                4->easy4.text = map[i%2].toString()
-            }
-            map[i%2]= map[i%2]!!-1
-        }
-
         easy1.setOnClickListener(this)
         easy2.setOnClickListener(this)
         easy3.setOnClickListener(this)
