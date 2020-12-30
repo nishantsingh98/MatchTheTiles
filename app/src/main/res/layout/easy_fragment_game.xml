@@ -6,59 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".gameLevels.EasyGameFragment">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout_easy_game"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:columnCount="2"
-        app:rowCount="2">
+        tools:itemCount="18"
+        tools:listitem="@layout/recycler_view_item" />
 
-        <Button
-            android:id="@+id/easy_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/easy_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/easy_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-
-        <Button
-            android:id="@+id/easy_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="50sp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
-    </androidx.gridlayout.widget.GridLayout>
 </FrameLayout>
