@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.matchthetiles.R
 import com.example.matchthetiles.RecyclerViewAdapter
 
-class EasyGameFragment : Fragment() {
+class EasyGameFragment : Fragment(), RecyclerViewAdapter.OnItemClickListener {
     private lateinit var navController: NavController
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -26,10 +26,16 @@ class EasyGameFragment : Fragment() {
         navController = Navigation.findNavController(view)
 
         val easyGameRecyclerView = view.findViewById<RecyclerView>(R.id.easyGame_recycler_view)
+        //to reset the game using play button
+
         val noOfColumns = 4
         val numbers = mutableListOf(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8)
         numbers.shuffle()
         easyGameRecyclerView.layoutManager = GridLayoutManager(this.context, noOfColumns)
-        easyGameRecyclerView.adapter = RecyclerViewAdapter(numbers)
+        easyGameRecyclerView.adapter = RecyclerViewAdapter(numbers, this)
+    }
+
+    override fun onItemClick(position: Int) {
+
     }
 }
