@@ -43,8 +43,8 @@ class EasyGameFragment : Fragment(), RecyclerViewAdapter.OnItemClickListener {
     }
 
     private fun startGame(easyGameRecyclerView: RecyclerView) {
-        val noOfColumns = 4
-        val numbers = mutableListOf(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8)
+        val noOfColumns = 3
+        val numbers = mutableListOf(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6)
         numbers.shuffle()
         easyGameRecyclerView.layoutManager = GridLayoutManager(this.context, noOfColumns)
         easyGameRecyclerView.adapter = RecyclerViewAdapter(numbers, this)
@@ -52,6 +52,7 @@ class EasyGameFragment : Fragment(), RecyclerViewAdapter.OnItemClickListener {
 
     private fun startTimer(timerTextView: TextView) {
         var counter = 10
+        timerTextView.visibility = View.VISIBLE
         object : CountDownTimer(10000, 1001) {
             override fun onTick(millisUntilFinished: Long) {
                 val str = "game starts in $counter"
